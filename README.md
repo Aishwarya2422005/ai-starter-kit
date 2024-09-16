@@ -17,36 +17,34 @@ Key features include sales insights like hierarchical views of sales, sales vs p
 
 
 # The technical working
-LLM Integration: The platform integrates the GPT-2 model via the Hugging Face transformers library, leveraging the SambaNova Enterprise Knowledge Retriever Starter Kit. It generates summaries, sales forecasts, and recommendations based on user inputs such as sales data and categorical information. The platform also supports interactive chat with uploaded PDFs, allowing users to ask questions and receive insights from the PDF content.
+**LLM Integration:** The platform integrates the GPT-2 model via the Hugging Face transformers library, leveraging the SambaNova Enterprise Knowledge Retriever Starter Kit. It generates summaries, sales forecasts, and recommendations based on user inputs such as sales data and categorical information. The platform also supports interactive chat with uploaded PDFs, allowing users to ask questions and receive insights from the PDF content.
 
-Prompt Engineering: Custom prompt templates structure user inputs, ensuring coherent and detailed responses from the GPT-2 model. These templates enable executive summaries, regional breakdowns, and category performance analysis, ensuring high relevance and accuracy in the model’s outputs.
+**Streamlit Interface:** Built using Streamlit, the front end provides an intuitive UI where users can upload CSV files, filter data by various parameters, and visualize trends with interactive charts. It also supports PDF uploads for chat-based interaction. Users can save and load their chat history, ensuring a seamless experience by storing and retrieving previous conversations.
 
-Streamlit Interface: Built using Streamlit, the front end provides an intuitive UI where users can upload CSV files, filter data by various parameters, and visualize trends with interactive charts. It also supports PDF uploads for chat-based interaction. Users can save and load their chat history, ensuring a seamless experience by storing and retrieving previous conversations.
+**Backend Processing:** The backend processes inputs with custom functions that leverage machine learning models like Prophet for forecasting and linear regression for trends analysis. It also performs anomaly detection and customer segmentation, while efficiently handling both CSV and PDF data for intelligent, context-aware responses.
 
-Backend Processing: The backend processes inputs with custom functions that leverage machine learning models like Prophet for forecasting and linear regression for trends analysis. It also performs anomaly detection and customer segmentation, while efficiently handling both CSV and PDF data for intelligent, context-aware responses.
-
-Output: The platform generates comprehensive reports, including executive summaries, regional breakdowns, customer segmentation, anomaly detection, and sales forecasts. Users can download these reports as text files and interact with PDF content via chat. The platform also includes features for saving and loading chat history, making it easy to store and revisit previous conversations.
+**Output:**The platform generates comprehensive reports, including executive summaries, regional breakdowns, customer segmentation, anomaly detection, and sales forecasts. Users can download these reports as text files and interact with PDF content via chat. The platform also includes features for saving and loading chat history, making it easy to store and revisit previous conversations.
 
 
 
 # Execution the project
 To run the project using a virtual environment (either virtualenv or conda), follow these steps in your project terminal:
 
-Navigate to the project directory:
+**Navigate to the project directory:**
 cd ai_starter_kit/enterprise_knowledge_retriever
 
-Create a virtual environment: For virtualenv, run:
+**Create a virtual environment: For virtualenv, run:**
 python3 -m venv enterprise_knowledge_env
 
-Activate the virtual environment: On macOS or Linux, run:
+**Activate the virtual environment: On macOS or Linux, run:**
 source enterprise_knowledge_env/bin/activate
 
-On Windows, run:
+**On Windows, run:**
 .\enterprise_knowledge_env\Scripts\activate
 
-Install the required packages:
+**Install the required packages:**
 pip install -r requirements.txt
 
-Run the application by:
+**Run the application by:**
 streamlit run streamlit/app.py --browser.gatherUsageStats false 
 
